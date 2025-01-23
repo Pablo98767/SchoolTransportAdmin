@@ -1,0 +1,21 @@
+{% extends 'portal_alunos/base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h3>Login do Aluno</h3>
+        <form method="post">
+            {% csrf_token %}
+            <label>Usuário:</label>
+            <input type="text" name="username" class="form-control" required>
+            <label>Senha:</label>
+            <input type="password" name="password" class="form-control" required>
+            <button type="submit" class="btn btn-warning mt-3">Entrar</button>
+        </form>
+        {% if erro %}
+            <p class="text-danger mt-2">{{ erro }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

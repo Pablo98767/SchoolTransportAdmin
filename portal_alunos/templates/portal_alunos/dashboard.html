@@ -1,0 +1,34 @@
+{% extends 'portal_alunos/base.html' %}
+{% block title %}Painel do Aluno{% endblock %}
+
+{% block content %}
+<h2>Bem-vindo, {{ aluno.nome }}!</h2>
+
+<h4>Sua Rota:</h4>
+<ul>
+    <li><b>Nome:</b> {{ aluno.rota.nome }}</li>
+    <li><b>Origem:</b> {{ aluno.rota.origem }}</li>
+    <li><b>Destino:</b> {{ aluno.rota.destino }}</li>
+    <li><b>Horário de saída:</b> {{ aluno.rota.horario_saida }}</li>
+    <li><b>Horário de chegada:</b> {{ aluno.rota.horario_chegada }}</li>
+</ul>
+
+<h4>Motorista:</h4>
+<ul>
+    <li><b>Nome:</b> {{ aluno.rota.motorista.nome }}</li>
+    <li><b>Telefone:</b> {{ aluno.rota.motorista.telefone }}</li>
+</ul>
+
+<h4>Veículo:</h4>
+<ul>
+    <li><b>Modelo:</b> {{ aluno.rota.veiculo.modelo }}</li>
+    <li><b>Placa:</b> {{ aluno.rota.veiculo.placa }}</li>
+</ul>
+
+<h4>Sua Presença:</h4>
+<p><b>Status Atual:</b> {{ aluno.get_presenca_display }}</p>
+<a href="{% url 'marcar_presenca' %}" class="btn btn-warning">Alterar Presença</a>
+
+<a href="{% url 'alterar_senha' %}" class="btn btn-primary">Alterar Senha</a>
+<a href="{% url 'logout' %}" class="btn btn-danger">Sair</a>
+{% endblock %}

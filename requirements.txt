@@ -1,0 +1,9 @@
+Django==5.1.5
+django-jazzmin==2.6.0  # Tema personalizado para o Django Admin
+djangorestframework==3.14.0  # Caso precise criar APIs no futuro
+python-dotenv==1.0.0  # Gerenciamento de variáveis de ambiente
+pillow==10.1.0  # Manipulação de imagens (caso use upload de fotos)
+whitenoise==6.6.0  # Para servir arquivos estáticos em produção
+django-filter==23.2  # Filtros avançados no Django Admin e nas views
+psycopg2-binary==2.9.9  # Conexão com PostgreSQL (remova se usar SQLite)
+gunicorn==21.2.0  # Servidor WSGI para produção

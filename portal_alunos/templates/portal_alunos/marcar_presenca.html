@@ -1,0 +1,30 @@
+{% extends 'portal_alunos/base.html' %}
+{% block title %}Marcar Presença{% endblock %}
+
+{% block content %}
+<h2>Marcar Presença no Transporte</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <label>Selecione sua presença:</label>
+    <select name="presenca" class="form-control">
+        <option value="vai_volta" {% if aluno.presenca == "vai_volta" %}selected{% endif %}>Vai e volta</option>
+        <option value="so_vai" {% if aluno.presenca == "so_vai" %}selected{% endif %}>Só vai</option>
+        <option value="so_volta" {% if aluno.presenca == "so_volta" %}selected{% endif %}>Só volta</option>
+        <option value="nao_vai" {% if aluno.presenca == "nao_vai" %}selected{% endif %}>Não vai e não volta</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary mt-3">Confirmar</button>
+</form>
+
+{% if messages %}
+    <div class="mt-3">
+        {% for message in messages %}
+            <p class="alert alert-success">{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<a href="{% url 'dashboard' %}" class="btn btn-secondary mt-3">Voltar</a>
+
+{% endblock %}
