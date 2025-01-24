@@ -3,7 +3,7 @@
  # 🚍  Sistema de Gestão de Transporte Escolar
  OBS : **O sistema está em versão inicial, e estou implementando melhorias pouco a pouco.**   
 
-O **Sistema de Gestão de Transporte Escolar** é uma aplicação web desenvolvida com **Django** para facilitar a administração do transporte de alunos. Ele permite que **administradores** gerenciem motoristas, veículos, rotas e alunos, enquanto **os alunos** podem acessar seu portal para visualizar suas rotas e marcar presença.
+O **Sistema de Gestão de Transporte Escolar** é uma aplicação web desenvolvida com **Django** para facilitar a administração do transporte de alunos do municipio de Guapó. Ele permite que **administradores** gerenciem motoristas, veículos, rotas e alunos, enquanto **os alunos** podem acessar seu portal para visualizar suas rotas e marcar presença.
 
 ## 📌 Funcionalidades Principais
 
