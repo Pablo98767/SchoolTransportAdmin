@@ -32,6 +32,29 @@ O **Sistema de Gestão de Transporte Escolar** é uma aplicação web desenvolvi
 
 ### ✅ **1️⃣ Clonar o Repositório**
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/seu-usuario/meu-projeto.git
+```
+
+
+### ✅ ** Instale e habilite o ambiente Virtual
+```bash
+  pip install venv
+  python -m venv nome_do_ambiente
+```
+### ✅ ** Rode todas as depedência do projeto
+```bash
+pip install -r requirements.txt
+```
+
+
+### ✅ ** Rode a aplicação 
+ 
+```bash
+ python manage.py runserver
+```
+
+### ✅ ** Após rodar acesse o servidor : http://localhost:8080/admin
+
+
+ 
 
